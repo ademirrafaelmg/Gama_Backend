@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+	<link href='https://fonts.googleapis.com/css?family=Tourney' rel='stylesheet'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet'> -->
+	<title>Black Friday da NerdStore</title>
+</head>
+<body>
+  <section class="section-container background-section-one">
+    <section id="section-logo">
+		<img src="assets/logo800.png" alt="Logotipo" class="logo-top">
+	</section>
+    <section id="top-menu" class="menu">
+	  <a href="/index.html"><div class="menu-item verde" id="menu-item-1"><p>Início</p></div></a>
+      <a href="/produtos.html"><div class="menu-item azul" id="menu-item-2"><p>Produtos</p></div></a>
+      <a href="/clientes.html"><div class="menu-item branco" id="menu-item-3"><p>Clientes</p></div></a>
+      <a href="#"><div class="menu-item vermelho" id="menu-item-4"><p>Financeiro</p></div></a>
+    </section>
+  </section>
+  <section class="section-container background-section-two">
+		<div class="bf-container">
+			<img src="assets/bf1000.jpg" alt="Black Friday">
+		</div>
+		
+		<div class="blackfriday">
+			<div class="timer-container">
+				FALTAM
+				<p id="timer"></p>
+			</div>
+			<p>Vem aí a <span  class="verde">Black Friday da Nerd Store</span>: 
+				uma sexta-feira cheia de <span  class="azul">promoções imperdíveis</span>. Os 
+				produtos mais cobiçados com os <span  class="vermelho">melhores descontos</span> e 
+				<span  class="amarelo">muitas surpresas</span> ao longo do dia. <span  class="laranja"><a href="#form">Cadastre seu email</a></span> para receber as <span  class="verde">melhores promoções</span> 
+				e ainda <span  class="azul">cupons especiais</span> para conseguir 
+				<span  class="vermelho">preços jamais vistos</span> naqueles produtos pelos quais você tanto esperava.</p>
+		</div>
+		<div class="form-container">
+      <div id="content">
+		<div id="mensagem"></div>
+        <form id="form">
+          <input type="text" placeholder="Seu nome" id="nome" oninput="hideIcon(this);" onblur="showIcon(this);">
+          <input type="text" placeholder="Seu email" id="email" oninput="hideIcon(this);" onblur="showIcon(this);">
+          <input type="submit" id ="cadastrar" value="Cadastrar">
+        </form>
+      </div>
+    </div>
+	</section>
+	<section class="section-container background-intersection"></section>
+
+
+  <section class="section-container background-section-three">
+		<div class="promotion">
+			<p>Estes e muitos outros itens raros, com preços imperdíveis...</p>
+		</div>
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="card-container">
+					<img src="assets/naruto.jpg" alt="Funko Pop Naruto Running">
+				</div>
+				<div class="text">Funko Pop Naruto Running</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="card-container">
+					<img src="assets/kanzenban.jpg" alt="Saint Seiya Kanzenban Vol. 18">
+				</div>
+				<div class="text">Saint Seiya Kanzenban Vol. 18</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="card-container">
+					<img src="assets/caneca-harry.jpg" alt="Caneca Harry Potter">
+				</div>
+				<div class="text">Caneca Harry Potter</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div> 
+
+  </section>
+  <section class="section-container background-section-four">
+		<div>
+			<p>Projeto desenvolvido para</p>
+		</div>
+		<div class="footer-logo">
+			<a href="https://www.hiringcoders.com.br/"><img src="assets/hiringcoders.png" alt="Hiring Coders Logo"></a>
+			<a href="https://www.gama.academy/"><img src="assets/gama.png" alt="Gama Academy Logo"></a>
+		</div>
+    <footer>
+      <p>Todos os direitos reservados ao desenvolvedor.</p>
+    </footer>
+  </section>
+  
+  
+</body>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+	<link href='https://fonts.googleapis.com/css?family=Tourney' rel='stylesheet'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet'> -->
+	<title>Black Friday da NerdStore</title>
+</head>
+<body>
+  <section class="section-container background-section-one">
+    <section id="section-logo">
+		<img src="assets/logo800.png" alt="Logotipo" class="logo-top">
+	</section>
+    <section id="top-menu" class="menu">
+	  <a href="/index.html"><div class="menu-item verde" id="menu-item-1"><p>Início</p></div></a>
+      <a href="/produtos.html"><div class="menu-item azul" id="menu-item-2"><p>Produtos</p></div></a>
+      <a href="/clientes.html"><div class="menu-item branco" id="menu-item-3"><p>Clientes</p></div></a>
+      <a href="#"><div class="menu-item vermelho" id="menu-item-4"><p>Financeiro</p></div></a>
+    </section>
+  </section>
+  <section class="section-container background-section-two">
+		<div class="page-title azul"><p>Produtos</p></div>
+		<div class="form-container">
+
+				<div class="form-title"><p>Cadastrar Produto</p></div>
+				
+					<div id="mensagem"></div>
+					<form id="product-form" method=POST>
+						<input type="text" placeholder="Nome do Produto" id="nome_produto"  required>
+						<input type="text" placeholder="Categoria" id="categoria" required>
+						<input type="number" min=1 placeholder="Quantidade em Estoque" id="quantidade" required>
+						<input type="number" step="0.01" min=0 placeholder="Valor Unitário" id="valor" required>
+						<div class="form-label"><label for="imagem">Selecionar Imagem</label></div>
+						
+						<input type="file" id="imagem" name="img" accept="image/*" required>
+						<input type="submit" id ="cadastrar" value="Cadastrar Produto"required>
+					</form>	
+					<div id="content"></div>
+				
+		</div>
+	</section>
+	
+	<section class="section-container background-section-three">
+		<div class="table-container">
+		<div class="form-title"><p>Lista de Produtos</p></div>
+		<div>
+			<table class="item-table" id="content-table">
+				<th>Nome do Produto</th>
+				<th>Categoria</th>
+				<th>Quantidade em Estoque</th>
+				<th>Valor Unitário</th>
+				<th>Imagem</th>
+			</table>
+		</div>
+	</div>
+  </section>
+  <section class="section-container background-section-four">
+		<div>
+			<p>Projeto desenvolvido para</p>
+		</div>
+		<div class="footer-logo">
+			<a href="https://www.hiringcoders.com.br/"><img src="assets/hiringcoders.png" alt="Hiring Coders Logo"></a>
+			<a href="https://www.gama.academy/"><img src="assets/gama.png" alt="Gama Academy Logo"></a>
+		</div>
+    <footer>
+      <p>Todos os direitos reservados ao desenvolvedor.</p>
+    </footer>
+  </section>
+  
+  
+</body>
+<script src="js/produtos.js"></script>
+</html>

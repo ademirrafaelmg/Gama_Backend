@@ -1,0 +1,551 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+a{
+  color: inherit;
+  text-decoration: unset;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background-image: url(../assets/wallpaper.png);
+  background-size: 100% 100%;
+}
+#section-logo{
+  margin-left: 50px;
+}
+.footer-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.footer-logo img{
+  height: 50px;
+}
+
+.logo-top{
+  width: 300px;
+}
+section{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+}
+
+.menu-item{
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+  font-family: 'Tourney', Helvetica, sans-serif;
+  font-size: 22px;
+  /* font-family: Garamond, serif; */
+}
+
+.menu-item:hover{
+  background-color: rgba(70, 70, 70, 0.8);
+}
+
+.verde{
+  color: #00bd00 !important;
+}
+.azul{
+  color: #0090db !important;
+}
+.branco{
+  color: #fff !important;
+}
+.vermelho{
+  color: #ff452d !important;
+}
+.amarelo{
+  color: #ffd900 !important;
+}
+.laranja{
+  color: #ff9c00 !important;
+}
+
+.page-title{
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+  font-family: 'Tourney', Helvetica, sans-serif;
+  font-size: 32px;
+  border-radius: 22px;
+  /* font-family: Garamond, serif; */
+}
+
+.section-container{
+  /* height: 100vh; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container{
+  height: 500px;
+  width: 100%;
+  background-color: rgba(70, 70, 70, 0.8);
+  padding: 30px;
+  min-width: 500px;
+}
+.card-container img{
+  width: 360px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#timer{
+  font-size: 70px;
+  color: orangered;
+}
+.timer-container{
+  text-align: center;
+  margin-bottom: 25px;
+}
+.bf-container img{
+  width: 500px;
+}
+.blackfriday{
+  font-size: 32px;
+  text-align: center;
+  line-height: 50px;
+}
+.promotion{
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  font-family: Tourney;
+  font-weight: bold;
+  line-height: 40px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.background-intersection{
+  height: 20px;
+  box-shadow: -10px -55px 15px #000;
+  margin: 0px;
+}
+.background-section-one{
+  height: 20vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  width: 100%;
+}
+.background-section-two{
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: #000; */
+  color: #fff;
+  font-family: 'Tourney', Helvetica, sans-serif;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 50px;
+  /* box-shadow: -10px -35px 25px #000; */
+}
+
+.background-section-three{
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+}
+.background-section-four{
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #fff;
+  box-shadow: -10px -40px 15px #000;
+  margin-bottom: 0px;
+  margin-top: 100px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  font-size: 18px;
+}
+
+#content img{
+  width: 50%;
+}
+.form-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 25px;
+  width: 350px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+.form-title{
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #b9b9b9;
+}
+.form-label{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 12px;
+  background: #000;
+  color: #898989;
+  font-size: 19px;
+  border: 2px solid #ff9c00;
+  line-height: 30px;
+}
+#email{
+  /* background-image: url(../assets/email-icon.png); */
+  background-size: 25px 25px;
+  background-position: 20% 50%; 
+  background-repeat: no-repeat;
+  /* text-indent: 20px; */
+}
+
+#nome{
+  /* background-image: url(../assets/nome-icon.png); */
+  background-size: 25px 25px;
+  background-position: 20% 50%; 
+  background-repeat: no-repeat;
+  /* text-indent: 20px; */
+}
+#cadastrar{
+  background-image: url(../assets/cubo.png);
+  background-size: 25px 25px;
+  background-position: 10% 50%; 
+  background-repeat: no-repeat;
+  font-family: Tourney;
+  color: #00bd00;
+  /* text-indent: 20px; */
+}
+
+#cadastrar:hover{
+  background-color: #ff9c00;
+  /* opacity: 0.75; */
+  /* text-indent: 20px; */
+}
+
+#mensagem{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  color: #b9b9b9;
+  font-size: 20px;
+}
+
+
+input{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  border-color: #ff9c00;
+  /* font-family: Tourney; */
+  font-size: 18px;
+}
+
+
+form{
+  display: grid;
+}
+
+.table-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 25px;
+  /* width: 350px; */
+  margin-top: 50px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  align-items: center;
+}
+.item-table{
+  font-size: 18px;
+  color:#b9b9b9;
+}
+.item-table td, th{
+  padding: 6px;
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+footer{
+  height: 50px;
+  padding-top: 25px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 50%;
+  position: relative;
+  margin: auto;
+  font-family: Helvetica, Tahoma, sans-serif;
+  min-width: 500px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgba(70, 70, 70, 0.5);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@media only screen and (max-width: 768px){
+  section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #section-logo{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo-top{
+    width: 250px;
+  }
+  .background-section-one {
+    height: 60vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tourney', Helvetica, sans-serif;
+    font-size: 22px;
+  }
+  .bf-container img {
+    width: 400px;
+  }
+  #timer {
+    font-size: 40px;
+    color: orangered;
+  }
+  .blackfriday {
+    font-size: 24px;
+    text-align: center;
+    line-height: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .promotion {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    font-family: Tourney;
+    font-weight: bold;
+    line-height: 30px;
+  }
+  .background-section-three {
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: 0px;
+  }
+  .promotion {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    font-family: Tourney;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .slideshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+    font-family: Helvetica, Tahoma, sans-serif;
+    min-width: 350px;
+  }
+  .mySlides {
+    display: none;
+    max-height: 420px;
+  }
+  .card-container {
+    height: 480px;
+    width: 100%;
+    background-color: rgba(70, 70, 70, 0.8);
+    padding: 30px;
+    min-width: 300px;
+  }
+  .card-container img {
+    width: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  .background-section-four {
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #fff;
+    box-shadow: -10px -40px 15px #000;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    font-size: 18px;
+}
+  .footer-logo img {
+    height: 30px;
+  }
+
+} 
