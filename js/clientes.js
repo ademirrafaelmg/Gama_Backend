@@ -17,11 +17,11 @@ window.addEventListener('load', (e) => {
 
   
   let clientes = localStorage.getItem('Clientes');
-  if(!(clientes && Object.keys(clientes).length === 0 && clientes.constructor === Object) && !clientes == null){
+  if(!(clientes && Object.keys(clientes).length === 0 && clientes.constructor === Object) && clientes != null){
     result =  JSON.parse(clientes);
     for (var product of result){
       var newRow = tableRef.insertRow(tableRef.rows.length);
-      newRow.innerHTML = `<td>${product.nome_cliente}</td><td>${product.categoria}</td><td>${product.quantidade}</td><td>${product.valor}</td><td>${product.imagem}</td>`;
+      newRow.innerHTML = `<td>${product.nome_cliente}</td><td>${product.cpf}</td><td>${product.data_nascimento}</td><td>${product.email}</td><td>${product.telefone}</td>`;
       // document.write(car.name + "<br />");
     }
     

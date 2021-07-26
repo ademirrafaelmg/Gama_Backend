@@ -17,12 +17,11 @@ window.addEventListener('load', (e) => {
 
   
   let produtos = localStorage.getItem('Produtos');
-  if(!(produtos && Object.keys(produtos).length === 0 && produtos.constructor === Object)){
+  if(!(produtos && Object.keys(produtos).length === 0 && produtos.constructor === Object) && produtos != null){
     result =  JSON.parse(produtos);
     for (var product of result){
       var newRow = tableRef.insertRow(tableRef.rows.length);
       newRow.innerHTML = `<td>${product.nome_produto}</td><td>${product.categoria}</td><td>${product.quantidade}</td><td>${product.valor}</td><td>${product.imagem}</td>`;
-      // document.write(car.name + "<br />");
     }
     
   }
