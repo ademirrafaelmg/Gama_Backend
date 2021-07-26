@@ -21,14 +21,25 @@ window.addEventListener('load', (e) => {
     result =  JSON.parse(clientes);
     for (var product of result){
       var newRow = tableRef.insertRow(tableRef.rows.length);
-      newRow.innerHTML = `<td>${product.nome_cliente}</td><td>${product.cpf}</td><td>${product.data_nascimento}</td><td>${product.email}</td><td>${product.telefone}</td>`;
-      // document.write(car.name + "<br />");
+      let delete_form = `<form action="#content-table" onsubmit="apagaCliente(${product.id})"><button type="submit">Apagar</button></form>`
+      newRow.innerHTML = `<td>${product.id}</td><td>${product.nome_cliente}</td><td>${product.cpf}</td><td>${product.data_nascimento}</td><td>${product.email}</td><td>${product.telefone}</td><td>${delete_form}</td>`;
     }
     
   }
 });
 
 
+function apagaCliente(idCliente){
+  if(confirm(`Você tem certeza que deseja apagar o cliente ${idCliente}?`)){
+    let tableRef = document.getElementById('table-rows');
+    let clientes = localStorage.getItem('Clientes');
+    clientes = JSON.parse(clientes);
+    clientes = clientes.filter(function(el) { return el.id != idCliente; });
+    let convertData = JSON.stringify(clientes);
+    localStorage.setItem('Clientes', convertData);
+    window.location.reload(false); 
+  }
+}
 
 const form = document.getElementById('product-form')
 
@@ -74,14 +85,13 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('Clientes', {})
     clientes = {};
   }
-  // let clientesArray =  JSON.parse(clientes)
 
   var result = [];
   if(!(clientes && Object.keys(clientes).length === 0 && clientes.constructor === Object)){
     result =  JSON.parse(clientes)
   }
 
-  let idP = result.length 
+  let idP = result.length > 0 ? result[result.length -1].id + 1 : 0;
   let data = {
       id: idP,
       nome_cliente:nome_cliente_,
@@ -103,7 +113,8 @@ form.addEventListener('submit', (e) => {
     content.innerHTML = pronto
     var tableRef = document.getElementById('content-table').getElementsByTagName('tbody')[0];
     var newRow = tableRef.insertRow(tableRef.rows.length);
-    newRow.innerHTML = `<td>${nome_cliente_}</td><td>${cpf_}</td><td>${data_nascimento_}</td><td>${email_}</td><td>${telefone_}</td>`;
+    let delete_form = `<form action="#content-table" onsubmit="apagaCliente(${idP})"><button type="submit">Apagar</button></form>`
+    newRow.innerHTML = `<td>${idP}</td><td>${nome_cliente_}</td><td>${cpf_}</td><td>${data_nascimento_}</td><td>${email_}</td><td>${telefone_}</td><td>${delete_form}</td>`;
   
     form.reset();
   }, 1000)

@@ -36,12 +36,6 @@ function apagaProduto(idProduto){
     produtos = produtos.filter(function(el) { return el.id != idProduto; });
     let convertData = JSON.stringify(produtos);
     localStorage.setItem('Produtos', convertData);
-    // let new_tbody = document.createElement('tbody');
-    // for (let product of produtos){
-    //   let newRow = new_tbody.insertRow(tableRef.rows.length);
-    //   let delete_form = `<form action="#content-table" onsubmit="apagaProduto(${product.id})"><button type="submit">Apagar</button></form>`
-    //   newRow.innerHTML = `<td>${product.id}</td><td>${product.nome_produto}</td><td>${product.categoria}</td><td>${product.quantidade}</td><td>${product.valor}</td><td>${product.imagem}</td><td>${delete_form}</td>`;
-    // }    
     window.location.reload(false); 
   }
 }
@@ -92,7 +86,6 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('Produtos', {})
     produtos = {};
   }
-  // let produtosArray =  JSON.parse(produtos)
 
   var result = [];
   if(!(produtos && Object.keys(produtos).length === 0 && produtos.constructor === Object)){
