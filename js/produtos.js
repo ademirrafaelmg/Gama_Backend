@@ -19,13 +19,26 @@ window.addEventListener('load', (e) => {
   let produtos = localStorage.getItem('Produtos');
   if(!(produtos && Object.keys(produtos).length === 0 && produtos.constructor === Object) && produtos != null){
     result =  JSON.parse(produtos);
-    for (var product of result){
-      var newRow = tableRef.insertRow(tableRef.rows.length);
-      newRow.innerHTML = `<td>${product.nome_produto}</td><td>${product.categoria}</td><td>${product.quantidade}</td><td>${product.valor}</td><td>${product.imagem}</td>`;
+    for (let product of result){
+      let newRow = tableRef.insertRow(tableRef.rows.length);
+      let delete_form = `<form action="#content-table" onsubmit="apagaProduto(${product.id})"><button type="submit">Apagar</button></form>`
+      newRow.innerHTML = `<td>${product.id}</td><td>${product.nome_produto}</td><td>${product.categoria}</td><td>${product.quantidade}</td><td>${product.valor}</td><td>${product.imagem}</td><td>${delete_form}</td>`;
     }
     
   }
 });
+
+function apagaProduto(idProduto){
+  if(confirm(`Você tem certeza que deseja apagar o produto ${idProduto}?`)){
+    let tableRef = document.getElementById('table-rows');
+    let produtos = localStorage.getItem('Produtos');
+    produtos = JSON.parse(produtos);
+    produtos = produtos.filter(function(el) { return el.id != idProduto; });
+    let convertData = JSON.stringify(produtos);
+    localStorage.setItem('Produtos', convertData);
+    window.location.reload(false); 
+  }
+}
 
 
 
@@ -73,14 +86,13 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('Produtos', {})
     produtos = {};
   }
-  // let produtosArray =  JSON.parse(produtos)
 
   var result = [];
   if(!(produtos && Object.keys(produtos).length === 0 && produtos.constructor === Object)){
     result =  JSON.parse(produtos)
   }
 
-  let idP = result.length 
+  let idP = result.length > 0 ? result[result.length -1].id + 1 : 0;
   let data = {
       id: idP,
       nome_produto:nome_produto_,
@@ -102,7 +114,8 @@ form.addEventListener('submit', (e) => {
     content.innerHTML = pronto
     var tableRef = document.getElementById('content-table').getElementsByTagName('tbody')[0];
     var newRow = tableRef.insertRow(tableRef.rows.length);
-    newRow.innerHTML = `<td>${nome_produto_}</td><td>${categoria_}</td><td>${quantidade_}</td><td>${valor_}</td><td>${imagem_}</td>`;
+    let delete_form = `<form action="#content-table" onsubmit="apagaProduto(${idP})"><button type="submit">Apagar</button></form>`
+    newRow.innerHTML = `<td>${idP}</td><td>${nome_produto_}</td><td>${categoria_}</td><td>${quantidade_}</td><td>${valor_}</td><td>${imagem_}</td><td>${delete_form}</td>`;
   
     form.reset();
   }, 1000)
